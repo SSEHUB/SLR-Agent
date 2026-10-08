@@ -2,6 +2,9 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+WORKSPACE_DIR="$SCRIPT_DIR/workspace"
+
+mkdir -p "$WORKSPACE_DIR/pdfs" "$WORKSPACE_DIR/seed" "$WORKSPACE_DIR/tmp"
 
 if ! command -v node >/dev/null 2>&1; then
   echo "Error: node is not installed. Please install Node.js >= 22.19.0." >&2
@@ -23,4 +26,5 @@ if [[ ! -d "$SCRIPT_DIR/node_modules" ]]; then
   npm --prefix "$SCRIPT_DIR" install --ignore-scripts
 fi
 
+cd "$WORKSPACE_DIR"
 exec "$SCRIPT_DIR/pi-test.sh" --extension "$SCRIPT_DIR/extensions" "$@"

@@ -4,7 +4,7 @@
 	"private": true,
 	"type": "module",
 	"pi": {
-		"extensions": ["./hello.ts"],
+		"extensions": ["./hello.ts", "./slr.ts"],
 		"skills": ["./skills"],
 		"prompts": ["./prompts"],
 		"themes": ["./themes"]
