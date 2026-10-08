@@ -17,8 +17,8 @@ export default function slrExtension(pi: ExtensionAPI) {
         }
     });
 
-    pi.registerCommand("hello", {
-		description: "Gibt Hello world aus",
+	pi.registerCommand("hello", {
+		description: "Prints Hello world",
 		handler: async () => {
 			pi.sendMessage({
 				customType: "hello-world",
@@ -39,7 +39,7 @@ export default function slrExtension(pi: ExtensionAPI) {
 			const context = args.trim();
 			pi.sendMessage({
 				customType: "slr-phase",
-				content: "Define the scope of your SLR, for example topic, target audience, and timeframe.",
+				content: "Define the scope of your SLR. I will guide you through the required details.",
 				display: true,
 				details: { phase: 1 },
 			});
