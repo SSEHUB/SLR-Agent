@@ -1,0 +1,14 @@
+{
+  "providers": {
+    "local": {
+      "baseUrl": "http://gpu2025.sse.local:8001/v1/",
+      "api": "openai-completions",
+      "apiKey": "dummy",
+      "models": [
+        {
+          "id": "unsloth/Qwen3.8-Flash-Next-GGUF:UD-Q4_K_XL"
+        }
+      ]
+    }
+  }
+}

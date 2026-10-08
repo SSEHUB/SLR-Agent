@@ -1,0 +1,7 @@
+node_modules
+.git
+dist
+*.log
+build-docker.sh
+local_build.sh
+run.sh
